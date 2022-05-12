@@ -56,7 +56,7 @@
   <!-- Font for body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Commissioner&family=Fraunces:opsz@9..144&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@700&family=Fraunces:opsz@9..144&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="normalize/normalize.css">
   <link rel="stylesheet" href="main.css">
@@ -68,34 +68,45 @@
 
   <!-- <nav>Defines a section of navigation links.</nav> -->
   <header>
-      <div id="home-icon">
-        <div>
-          <img src="favicon-32x32.png" alt="Balkrishna Agarwal photo" class="logo-img">
-        </div>
-        <p>Krishna</p>
+    <div id="home-icon">
+      <div>
+        <img src="favicon-32x32.png" alt="Balkrishna Agarwal photo" class="logo-img">
       </div>
-      <div id="external-links">
-        <div>
-        <a href="https://github.com/krishna-404">
-          G
+      <p>K404</p>
+    </div>
+    <ul id="external-links">
+      <li>
+        <a href="https://github.com/krishna-404" aria-label="Github" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
         </a>
-      </div>
-        <a href="https://linkedin.com/in/krishna-teziapp">
-          L
+      </li>
+      <li>
+        <a href="https://linkedin.com/in/krishna-teziapp" aria-label="LinkedIn" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><title>LinkedIn</title><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
         </a>
-        <a href="https://twitter.com/krishnaa404">
-          T
+      </li>
+      <li>
+        <a href="https://twitter.com/krishnaa404" aria-label="Twitter" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><title>Twitter</title><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
         </a>
-      </div>
+      </li>
+    </ul>
   </header>
+  <div id="menu">
+    <h4 id="menu-aboutme" class="menuitem">/aboutMe</h4>
+    <h4 id="menu-workex" class="menuitem">/workEx</h4>
+    <h4 id="menu-projects" class="menuitem">/projects</h4>
+    <h4 id="menu-blogs" class="menuitem">/blogs</h4>
+    <h4 id="menu-contact" class="menuitem">/contact</h4>
+  </div>
   <main>
     <section id="first-fold">
       <p>Hello! I am</p>
       <h1>Balkrishna Agarwal</h1>
       <h2>Builder & Full Stack Developer.</h2> 
-
-      <p>I'm a software engineer specialising in web technologies. I'm a builder, not only building solutions to solve real-life problems but also for user delight.</p>
-      <p>I am a natural leader & thrive in teams. Currently I am solving for Textile Agents in India with Smart Agent.</p>
+      <p>I'm a software engineer specialising in <span class="highlight-span">web technologies</span>. I'm a builder, building solutions to solve real-life problems & mainly for <span class="highlight-span">user delight</span> .</p>
+      <br>
+      <p>I am a natural leader & thrive in teams. Currently I am solving Accounting & CRM for Textile Agents in India with <a href="https://smartagent.one">Smart Agent</a>.</p>
     </section>
     <section id="about-me">
       <p>Hello! I  </p>
@@ -103,7 +114,7 @@
   </main>
 
 
-    <a href="react-calculator\react-calc.html">
+    <a href="react-calculator/react-calc.html">
       <div class="thumbnail-container" title="React Project - Calculator">
         <div class="thumbnail">
           <iframe src="react-calculator\react-calc.html" frameborder="0" onload="var that=this;setTimeout(function() { that.style.opacity = 1 }, 500)"></iframe>

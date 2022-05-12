@@ -3,6 +3,7 @@
   --textcol1: #003249;
   --textcol2: #007EA7;
   --contrastcol1: #7CAE7A;
+  --contrastcol2: #839073;
   --seccol1: #f038ff, rgb(240, 56, 255);
   --seccol2: #7ae7c7, rgb(122, 231, 199);
   --seccol3: #6A56FF, rgb(82, 72, 156);
@@ -126,6 +127,12 @@ header {
   justify-content: space-between;
 }
 
+#menu {
+  position: fixed;
+  right: 5px;
+  top: 5px;
+}
+
 .logo-img {
   border-radius: 50%;
   margin-right: 3px;
@@ -138,9 +145,19 @@ header {
   align-items: center;
 }
 
+.menuitem {
+  display: none;
+}
+
 #external-links {
   display: flex;
   flex-direction: column;
+}
+
+#external-links>li>a>svg{
+  width: 30px;
+  height: 30px;
+  margin: 10px auto;
 }
 
 section {
@@ -156,14 +173,30 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: clamp(35px, 6vw, 80px);
+  font-size: clamp(35px, 5vw, 80px);
   margin-left: -4px;
 }
 
 h2 {
-  font-size: clamp(30px, 5vw, 70px);
+  font-size: clamp(30px, 4vw, 70px);
   color: var(--textcol2);
   margin-left: -4px;
+  text-align: justify;
+}
+
+#first-fold > p {
+  max-width: 90%;
+  text-align: justify;
+}
+
+.highlight-span {
+  background-color: white;
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+#first-fold > p > a{
+  color: var(--textcol1);
 }
 
 .thumbnail iframe {
@@ -307,6 +340,13 @@ h2 {
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
+  body {
+    max-width: 70%
+  }
+
+  #first-fold>p {
+    max-width: 60%;
+  }
 }
 
 @media print,
