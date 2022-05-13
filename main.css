@@ -145,10 +145,6 @@ header {
   align-items: center;
 }
 
-.menuitem {
-  display: none;
-}
-
 #external-links {
   display: flex;
   flex-direction: column;
@@ -197,6 +193,55 @@ h2 {
 
 #first-fold > p > a{
   color: var(--textcol1);
+}
+
+.innerdiv{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.innerdiv>*{
+  margin: 10px;
+}
+
+.aboutme-img{
+  max-width: 300px;
+  max-height: 300px;
+  position: relative;
+}
+
+#aboutme-img::after{
+  content: "";
+  display: block;
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--contrastcol1);
+  top: 20px;
+  left: -20px;
+  z-index: -1;
+}
+
+#aboutme-notes>p{
+  text-align:justify;
+}
+
+#aboutme-notes>ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+}
+
+#aboutme-notes>ul>li{
+  padding-left: 20px;
+  position: relative;
+}
+
+#aboutme-notes>ul>li::before{
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: var(--contrastcol1);
 }
 
 .thumbnail iframe {
@@ -346,6 +391,10 @@ h2 {
 
   #first-fold>p {
     max-width: 60%;
+  }
+
+  .innerdiv {
+    display: flex;
   }
 }
 
