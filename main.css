@@ -133,6 +133,10 @@ header {
   top: 5px;
 }
 
+ul{
+  list-style: none;
+}
+
 .logo-img {
   border-radius: 50%;
   margin-right: 3px;
@@ -157,7 +161,7 @@ header {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items:initial;
@@ -227,7 +231,6 @@ h2 {
 }
 
 #aboutme-notes>ul {
-  list-style: none;
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
 }
@@ -244,9 +247,21 @@ h2 {
   color: var(--contrastcol1);
 }
 
+.workitem{
+  min-width: 150px;
+}
+
+.workitem:hover{
+  cursor: pointer;
+}
+
 .thumbnail iframe {
   width: 1440px;
   height: 900px;
+}
+
+.workdeetsitem {
+  display:none;
 }
 
 .thumbnail {
@@ -395,6 +410,12 @@ h2 {
 
   .innerdiv {
     display: flex;
+  }
+
+  .workitem{
+    border-left: 2px solid var(--contrastcol2);
+    padding: 6px 0;
+    padding-left: 5px;
   }
 }
 
