@@ -184,6 +184,18 @@ h2 {
   text-align: justify;
 }
 
+h3 {
+  color: var(--textcol2);
+}
+
+a{
+  text-decoration: none;
+}
+
+h4 {
+  font-family: 'Commissioner', sans-serif;
+}
+
 #first-fold > p {
   max-width: 90%;
   text-align: justify;
@@ -247,21 +259,89 @@ h2 {
   color: var(--contrastcol1);
 }
 
+
+#workex {
+  padding-top: 6em;
+  justify-content: flex-start;
+}
+
+#workex>.innerdiv{
+  display: flex;
+  flex-direction: column;
+}
+
+#worklistdiv{
+  overflow-x:scroll;
+}
+
+#worklist {
+  display: flex;
+  overflow-x: auto;
+}
+
 .workitem{
-  min-width: 150px;
+  padding: 6px 5px;
 }
 
 .workitem:hover{
   cursor: pointer;
 }
+.companyname {
+  color: var(--contrastcol1);
+}
 
-.thumbnail iframe {
-  width: 1440px;
-  height: 900px;
+.workperiod {
+  color: var(--textcol2);
+}
+
+.workhighlightslist{
+  padding-top: 20px;
+}
+
+.workhighlights{
+  position: relative;
+  padding-left: 20px;
+}
+
+.workhighlights::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: var(--contrastcol1);
 }
 
 .workdeetsitem {
   display:none;
+}
+
+.indprojectdiv {
+  width: 93%;
+  margin: auto;
+}
+
+.projecttypeheader{
+  padding-left: 20px;
+  position: relative;
+}
+
+.projectdeetsdiv {
+  text-align: justify;
+}
+
+.projecttypeheader::before{
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: var(--contrastcol1);
+}
+
+.projectdeets {
+  padding-right: 10px;
+}
+
+.thumbnail iframe {
+  width: 1440px;
+  height: 900px;
 }
 
 .thumbnail {
@@ -398,7 +478,7 @@ h2 {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 960px) {
   /* Style adjustments for viewports that meet the condition */
   body {
     max-width: 70%
@@ -412,11 +492,33 @@ h2 {
     display: flex;
   }
 
-  .workitem{
-    border-left: 2px solid var(--contrastcol2);
-    padding: 6px 0;
-    padding-left: 5px;
+  #workex>.innerdiv{
+    flex-direction: row;
   }
+
+  #worklistdiv{
+    min-width: 170px;
+    overflow-x: hidden;
+  }
+
+  #worklist {
+    flex-direction: column;
+  }
+
+  .workitem{
+    padding-right: 0;
+  }
+
+  .projectdeetsdiv {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .projectdeets{
+    max-width: 50%;
+  }
+
 }
 
 @media print,

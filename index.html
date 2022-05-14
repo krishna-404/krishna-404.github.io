@@ -93,11 +93,12 @@
     </ul>
   </header>
   <div id="menu">
-    <h4 id="menu-aboutme" class="menuitem">/aboutMe</h4>
-    <h4 id="menu-workex" class="menuitem">/workEx</h4>
-    <h4 id="menu-projects" class="menuitem">/projects</h4>
-    <h4 id="menu-blogs" class="menuitem">/blogs</h4>
-    <h4 id="menu-contact" class="menuitem">/contact</h4>
+    <a href="#about-me"><h4 id="menu-about-me" class="menuitem" onClick="menuClick(this)">/aboutMe</h4></a>
+    <a href="#workex"><h4 id="menu-workex" class="menuitem" onClick="menuClick(this)">/workEx</h4></a>
+    <a href="#projects"><h4 id="menu-projects" class="menuitem" onClick="menuClick(this)">/projects</h4></a>
+<!--     
+    <h4 id="menu-blogs" class="menuitem" onClick="menuClick(this)"><a href="#blogs">/blogs</a></h4>
+    <h4 id="menu-contact" class="menuitem" onClick="menuClick(this)"><a href="#contact">/contact</a></h4> -->
   </div>
   <main>
     <section id="first-fold">
@@ -106,7 +107,7 @@
       <h2>Builder & Full Stack Developer.</h2> 
       <p>I'm a software engineer specialising in <span class="highlight-span">web technologies</span>. I'm a builder, building solutions to solve real-life problems & mainly for <span class="highlight-span">user delight</span> .</p>
       <br>
-      <p>I am a natural leader & thrive in teams. Currently I am building an Accounting & CRM Tool for Textile Agents with <a href="https://smartagent.one">Smart Agent</a>.</p>
+      <p>Currently I am building an Accounting & CRM Tool for Textile Agents with <a href="https://smartagent.one">Smart Agent</a>.</p>
     </section>
     <section id="about-me">
       <h2>About Me</h2>
@@ -182,6 +183,98 @@
             <li class="workhighlights">Responsible for digitising of all functions from Accounts to Marketing.</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projecttypediv">
+      <h3 class="projecttypeheader">Nodejs, MongoDB & ejs</h3>
+      <div class="indprojectdiv">
+        <a href="https://readbetterin.herokuapp.com">
+          <h4 class="projectheader">Read Better</h4>
+          <div class="projectdeetsdiv">
+            <div class="projectdeets">
+              <p>Read Better is a SEO friendly web-app which is a book recommendation engine based on the leaders that the user follows on twitter. When the user selects a book it takes them to an Amazon affiliate link & hence is a financially viable project.</p>
+              <br>
+              <p>The Responsive Web App is made in nodejs using express engine along with MongoDB database. It uses ejs to create dynamic webpages which are SEO friendly. It also involves an admin panel which is used to categorise books & add any new recommendations from the leaders.</p>
+              <br>
+              <p>Use this to select your next book to read!</p>
+            </div>
+            <div class="thumbnail-container" title="Thumbnail Image of Read Better">
+              <div class="thumbnail">
+                <iframe src="https://readbetterin.herokuapp.com" frameborder="0" onload="var that=this;setTimeout(function() { that.style.opacity = 1 }, 500)"></iframe>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="projecttypediv">
+      <h3 class="projecttypeheader">REST API - Nodejs, MongoDB</h3>
+      <div class="indprojectdiv">
+        <a href="https://chotu.onrender.com">
+          <h4 class="projectheader">Chotu - URL Shortner</h4>
+          <div class="projectdeetsdiv">
+            <div class="projectdeets">
+              <p>Chotu is a REST API to get a quick & hassle-free short link generator. Also tracks the number of times the chotu link has been accessed. Attending the chotu link forwards the user them to the Long URL.
+              </p>
+              <br>
+              <p>REST API allows a user to call an endpoint with the 'Long Url' & an optional 'preferred short code'. The API returns a short link if the preferred code is available or it creates a random short code. Accessing the '/short-code/stats' endpoint gives the statistics about the number of times the url has been used/visited.</p>
+              <br>
+              <p>Share chotu links instead of Long URLs.</p>
+            </div>
+            <div class="thumbnail-container" title="Thumbnail Image of Chotu - URL Shortner">
+              <div class="thumbnail">
+                <iframe src="https://chotu.onrender.com" frameborder="0" onload="var that=this;setTimeout(function() { that.style.opacity = 1 }, 5000)"></iframe>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="projecttypediv">
+      <h3 class="projecttypeheader">Reactjs</h3>
+      <div class="indprojectdiv">
+        <a href="pomodoro-clock/pomodoro-clock.html">
+          <h4 class="projectheader">Pomodoro Clock</h4>
+          <div class="projectdeetsdiv">
+            <div class="projectdeets">
+              <p>Pomodoro technique helps in Time Management by motivating people to break their work into small chunks to be completed in set time intervals called pomodoros. Generally a chunk of work is for 25 minutes followed by a break for 5 minutes.</p>
+              <br>
+              <p>This app allows one to have a pomodoro click with custom time limits they can set. The app sounds an alarm one completion of the work-time & break-time.</p>
+              <br>
+              <p>Use this & enhance your productivity by not getting over-worked. 🙂</p>
+            </div>  
+            <div class="thumbnail-container" title="Thumbnail Image of Pomodoro Clock">
+              <div class="thumbnail">
+                <iframe src="pomodoro-clock/pomodoro-clock.html" frameborder="0" onload="var that=this;setTimeout(function() { that.style.opacity = 1 }, 5000)"></iframe>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="projecttypediv">
+      <h3 class="projecttypeheader">D3js - Data Visualisation</h3>
+      <div class="indprojectdiv">
+        <a href="choropleth\choropleth.html">
+          <h4 class="projectheader">Choropleth</h4>
+          <div class="projectdeetsdiv">
+            <div class="projectdeets">
+              <p>Here is a project which helps with visualisation of data of percentage of population which has completed a bachelors degree (or higher). The data is for the period 2010 - 2014 & district wise details are available</p>
+              <br>
+              <p>Here we use D3js javascript library & data available at USDA Economic Research Service to visualise the above data on the map of USA. The darkness/depth of the color determines the percentage of people in that district who have completed the bachelors degree.</p>
+              <br>
+              <p>Check out the district wise education levels of USA.</p>
+            </div>
+            <div class="thumbnail-container" title="Thumbnail Image of Choropleth - Data Visualisation">
+              <div class="thumbnail">
+                <iframe src="choropleth\choropleth.html" frameborder="0" onload="var that=this;setTimeout(function() { that.style.opacity = 1 }, 500)"></iframe>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
