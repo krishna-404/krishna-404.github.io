@@ -37,11 +37,33 @@ function workexclick(clickedElement){
     }
   }
 }
-let oldElement;
+// let oldElement;
 
-function menuClick(newElement) {
-  newElement.style.color = '#007EA7';
-  console.log(oldElement);
-  if (oldElement) oldElement.style.color = '#003249';
-  oldElement = newElement;
-}
+// function menuClick(newElement) {
+//   newElement.style.color = '#007EA7';
+//   console.log(oldElement);
+//   if (oldElement) oldElement.style.color = '#003249';
+//   oldElement = newElement;
+// }
+
+$(document).ready(function(){
+  let sectionIds = $('#menu a');
+
+  $(document).scroll(function() {
+    console.log("scrollllllll");
+    sectionIds.each(function(a){
+      console.log($(this).children());
+      let container = $(this).attr('href');
+      let containerOffset = $(container).offset().top;
+      let containerHeight = $(container).outerHeight();
+      let containerBottom = containerOffset+containerHeight;
+      let scrollPosition = $(document).scrollTop();
+
+      if(scrollPosition < containerBottom-20 && scrollPosition>=containerOffset-20) {
+        $(this).children().addClass('active');
+      } else {
+        $(this).children().removeClass('active');
+      };
+    });
+  });
+});
