@@ -154,7 +154,7 @@ ul{
   flex-direction: column;
 }
 
-#external-links>li>a>svg{
+#external-links>li>a>svg, #external-links>li>a>img{
   width: 30px;
   height: 30px;
   margin: 10px auto;

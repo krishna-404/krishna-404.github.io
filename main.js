@@ -1,13 +1,34 @@
-window.addEventListener("DOMContentLoaded", function(){
+
+$(document).ready(function(){
+
   let start = 0;
 
-  if (start ===0) {
+  if (start === 0) {
     start++;
-    let workexElements = document.getElementsByClassName('workitem');
+    let workexElements = $('.workitem');
     workexclick(workexElements[0]);
   };
-})
 
+  let sectionIds = $('#menu a');
+
+  $(document).scroll(function() {
+    console.log("scrollllllll");
+    sectionIds.each(function(a){
+      console.log($(this).children());
+      let container = $(this).attr('href');
+      let containerOffset = $(container).offset().top;
+      let containerHeight = $(container).outerHeight();
+      let containerBottom = containerOffset+containerHeight;
+      let scrollPosition = $(document).scrollTop();
+
+      if(scrollPosition < containerBottom-20 && scrollPosition>=containerOffset-20) {
+        $(this).children().addClass('active');
+      } else {
+        $(this).children().removeClass('active');
+      };
+    });
+  });
+});
 
 function workexclick(clickedElement){
   // console.log(clickedElement);
@@ -37,33 +58,3 @@ function workexclick(clickedElement){
     }
   }
 }
-// let oldElement;
-
-// function menuClick(newElement) {
-//   newElement.style.color = '#007EA7';
-//   console.log(oldElement);
-//   if (oldElement) oldElement.style.color = '#003249';
-//   oldElement = newElement;
-// }
-
-$(document).ready(function(){
-  let sectionIds = $('#menu a');
-
-  $(document).scroll(function() {
-    console.log("scrollllllll");
-    sectionIds.each(function(a){
-      console.log($(this).children());
-      let container = $(this).attr('href');
-      let containerOffset = $(container).offset().top;
-      let containerHeight = $(container).outerHeight();
-      let containerBottom = containerOffset+containerHeight;
-      let scrollPosition = $(document).scrollTop();
-
-      if(scrollPosition < containerBottom-20 && scrollPosition>=containerOffset-20) {
-        $(this).children().addClass('active');
-      } else {
-        $(this).children().removeClass('active');
-      };
-    });
-  });
-});
