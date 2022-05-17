@@ -5,6 +5,10 @@ $(document).ready(function(){
 
   if (start === 0) {
     start++;
+    let firstNav = $('#menu a:first-child');
+    firstNav.addClass('display');
+    firstNav.children().addClass('active');
+
     let workexElements = $('.workitem');
     workexclick(workexElements[0]);
   };
@@ -23,8 +27,10 @@ $(document).ready(function(){
 
       if(scrollPosition < containerBottom-20 && scrollPosition>=containerOffset-20) {
         $(this).children().addClass('active');
+        $(this).addClass('display');
       } else {
         $(this).children().removeClass('active');
+        $(this).removeClass('display');
       };
     });
   });
@@ -56,5 +62,25 @@ function workexclick(clickedElement){
       }
       workdeetsElements[i].style.display = 'none';
     }
+  }
+}
+let open=false;
+function menuToggle() {
+  // console.log(open)
+  let elements = $('#menu').children();
+  let arrowElement = $('#menu-container p');
+
+  if(open) {
+    open = false;
+    arrowElement.text('▽');
+    elements.each(function(idx, val) {
+      if(!$(this).children("h4").hasClass('active')) {
+        $(this).removeClass('display');
+      }
+    })
+  } else {
+    open = true;
+    arrowElement.text('△');
+    elements.addClass('display');
   }
 }

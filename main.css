@@ -113,24 +113,61 @@ html {
 
 body {
   margin: auto;
-  max-width: 90%;
+  max-width: 80%;
   min-height: 100vh;
 }
+nav {
+  z-index: 9999;
+  position: relative;
+}
+topnav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: rgba(255,255,255,0.7);
+  height: 42px;
+}
 
-header {
+leftnav {
   position:fixed;
-  top:5px;
+  bottom:15px;
   left:5px;
   height: 98vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:end;
+}
+
+#clickHereElement {
+  transform: rotate(270deg);
+}
+
+#menu-container {
+  display: flex;
+}
+
+#menu-toggle{
+  padding-left: 5px;
+}
+
+#menu>a{
+  display: none;
+}
+
+#menu>a.display{
+  display: block;
 }
 
 #menu {
+  text-align: right;
   position: fixed;
-  right: 5px;
-  top: 5px;
+  right: 25px;
+  top: 8px;
 }
 
 ul{
@@ -140,13 +177,6 @@ ul{
 .logo-img {
   border-radius: 50%;
   margin-right: 3px;
-}
-
-#home-icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 #external-links {
@@ -228,6 +258,7 @@ h4 {
   max-width: 300px;
   max-height: 300px;
   position: relative;
+  z-index: 1;
 }
 
 #aboutme-img::after{
@@ -486,6 +517,18 @@ h4 {
   /* Style adjustments for viewports that meet the condition */
   body {
     max-width: 70%
+  }
+
+  topnav {
+    background-color: transparent;
+  }
+
+  #menu>a{
+    display: block;
+  }
+
+  #menu-toggle {
+    display: none;
   }
 
   #first-fold>p {
