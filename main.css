@@ -141,10 +141,28 @@ leftnav {
   display: flex;
   flex-direction: column;
   justify-content:end;
+  align-items: center;
 }
 
-#clickHereElement {
-  transform: rotate(270deg);
+#clickHereEl {
+  writing-mode:vertical-rl;
+  transform: rotate(180deg);
+  vertical-align: center;
+}
+
+#clickHereEl {
+  vertical-align: middle;
+}
+
+#external-links {
+  display: flex;
+  flex-direction: column;
+}
+
+#external-links>li>a>svg, #external-links>li>a>img{
+  width: 30px;
+  height: 30px;
+  margin: 10px auto;
 }
 
 #menu-container {
@@ -172,22 +190,12 @@ leftnav {
 
 ul{
   list-style: none;
+  color: var(--textcol2);
 }
 
 .logo-img {
   border-radius: 50%;
   margin-right: 3px;
-}
-
-#external-links {
-  display: flex;
-  flex-direction: column;
-}
-
-#external-links>li>a>svg, #external-links>li>a>img{
-  width: 30px;
-  height: 30px;
-  margin: 10px auto;
 }
 
 section {
